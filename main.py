@@ -54,11 +54,14 @@ def list_fields(data):
 
 
 def menu():
+    print("\n")
     choice = input('Select options:\n৹ Type 1 to search\n৹ Type 2 to view fields\n৹ Type quit to exit:\n ')
     if choice == '1':
         search()
+        menu()
     elif choice == '2':
         list_fields(load_data())
+        menu()
     elif choice == 'quit':
         exit()
     else:
